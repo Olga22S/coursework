@@ -2,26 +2,17 @@ package ru.skypro.employeebook;
 
 public class Employee {
 
-    private static int employeeCounter;
+    private static int employeeCounter = 1;
     private final int id;
     private final String fullName;
     private int department;
     private double salary;
 
-    static {
-        employeeCounter = 1;
-    }
-
     public Employee(String fullName, int department, double salary) {
-        id = employeeCounter;
-        employeeCounter++;
+        id = employeeCounter++;
         this.fullName = fullName;
         this.department = department;
         this.salary = salary;
-    }
-
-    public static int getEmployeeCounter() {
-        return employeeCounter;
     }
 
     public int getId() {
